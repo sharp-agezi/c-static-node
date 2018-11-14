@@ -1,11 +1,11 @@
 /**首页路由**/
 const fs = require('fs');
 
-const index = ctx => {
+const home = ctx => {
     ctx.response.type = 'html';
     ctx.response.body = fs.createReadStream('./src/views/index.html');
 };
 
 module.exports={
-    home:index
+    home:home
 };

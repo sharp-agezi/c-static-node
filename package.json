@@ -5,7 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "koa": "^2.6.2",
-    "koa-router": "^7.4.0"
+    "koa-router": "^7.4.0",
+    "uglifyjs-webpack-plugin": "^2.0.1"
   },
   "devDependencies": {
     "fs": "0.0.1-security",

@@ -1,9 +1,12 @@
 'use strict';
-const Koa = require('koa');
-const fs = require('fs');
-const ejs = require('ejs'); //使用ejs模板
-const app = new Koa();
-const router =require('koa-router')();
+const Koa = require('koa'),
+    fs = require('fs'),
+    ejs = require('ejs'), //使用ejs模板
+    app = new Koa(),
+    router =require('koa-router')(),
+    staticService = require('koa-static'),
+    path = require('path'),
+    render = require('koa-ejs');
 
 /**
  *当请求开始时首先请求流通过 x-response-time 和 logging 中间件,
@@ -28,10 +31,23 @@ app.use(async (ctx, next)=>{
 
 //response
 
-//router
+//静态资源配置
+app.use(staticService(path.join(__dirname,'src/assets')));
 
+//koa-ejs
+// render(app,{
+//     root: path.join(__dirname, 'src/views'),
+//     layout: 'templates/head/head',
+//     viewExt: 'html',
+//     cache: false,
+//     debug: true
+// });
+// app.use(function *(){
+//     yield this.render('index',{layout:false});
+// });
+
+//router
 const index = require('./src/router/index').home; //index
-console.log(index)
 router.get('/',index)
 
 app.use(router.routes());

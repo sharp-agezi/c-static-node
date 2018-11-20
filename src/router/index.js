@@ -6,6 +6,9 @@ const home = ctx => {
     ctx.response.body = fs.createReadStream('./src/views/index.html');
 };
 
+
+
+
 module.exports={
     home:home
 };

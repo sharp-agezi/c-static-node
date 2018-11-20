@@ -1,7 +1,6 @@
 'use strict';
 const Koa = require('koa'),
     fs = require('fs'),
-    ejs = require('ejs'), //使用ejs模板
     app = new Koa(),
     router =require('koa-router')(),
     staticService = require('koa-static'),
@@ -33,7 +32,7 @@ app.use(async (ctx, next)=>{
 
 //静态资源配置
 app.use(staticService(path.join(__dirname,'src/assets')));
-
+console.log(render)
 //koa-ejs
 // render(app,{
 //     root: path.join(__dirname, 'src/views'),

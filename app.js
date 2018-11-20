@@ -1,6 +1,7 @@
 'use strict';
 const Koa = require('koa');
 const fs = require('fs');
+const ejs = require('ejs'); //使用ejs模板
 const app = new Koa();
 const router =require('koa-router')();
 

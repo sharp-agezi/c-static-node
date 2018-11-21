@@ -32,7 +32,6 @@ app.use(async (ctx, next)=>{
 
 //静态资源配置
 app.use(staticService(path.join(__dirname,'src/assets')));
-console.log(render)
 //koa-ejs
 // render(app,{
 //     root: path.join(__dirname, 'src/views'),

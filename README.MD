@@ -4,7 +4,11 @@ koa-static 静态资源配置
 koa-ejs  koa的ejs 模板
 koa-router koa路由
 
-node-sass sass支持
+
+node-sass sass-loader 配置打包sass
+extract-text-webpack-plugin  配置生成css
+
+
 
 ##### koa-ejs use
 var render = require('koa-ejs');

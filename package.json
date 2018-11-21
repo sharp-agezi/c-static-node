@@ -12,14 +12,17 @@
     "uglifyjs-webpack-plugin": "^2.0.1"
   },
   "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
     "fs": "0.0.1-security",
     "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
     "webpack": "^4.25.1",
     "webpack-dev-server": "^3.1.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "start":"node app.js",
+    "build": "node build/webpack.base.config.js"
   },
   "author": "",
   "license": "ISC"
